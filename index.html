@@ -169,7 +169,68 @@ box-shadow:0 18px 30px rgba(37,99,235,.4);
 transform:scale(.95);
 
 }
+/* ===== เมฆลอย ===== */
 
+.cloud{
+    position:fixed;
+    width:220px;
+    height:70px;
+    background:rgba(255,255,255,0.9);
+    border-radius:100px;
+    z-index:-1;
+    animation:cloudMove linear infinite;
+}
+
+.cloud::before{
+    content:"";
+    position:absolute;
+    width:80px;
+    height:80px;
+    background:white;
+    border-radius:50%;
+    top:-35px;
+    left:30px;
+}
+
+.cloud::after{
+    content:"";
+    position:absolute;
+    width:100px;
+    height:100px;
+    background:white;
+    border-radius:50%;
+    top:-45px;
+    right:30px;
+}
+
+.cloud1{
+    top:80px;
+    left:-250px;
+    animation-duration:35s;
+}
+
+.cloud2{
+    top:220px;
+    left:-350px;
+    transform:scale(.8);
+    animation-duration:45s;
+}
+
+.cloud3{
+    top:420px;
+    left:-300px;
+    transform:scale(1.2);
+    animation-duration:55s;
+}
+
+@keyframes cloudMove{
+    from{
+        transform:translateX(-350px);
+    }
+    to{
+        transform:translateX(calc(100vw + 700px));
+    }
+}
 </style>
 
 </head>
@@ -201,6 +262,12 @@ transform:scale(.95);
 </div>
 
 </div>
+<body>
 
+<div class="cloud cloud1"></div>
+<div class="cloud cloud2"></div>
+<div class="cloud cloud3"></div>
+
+<div class="card">
 </body>
 </html>
