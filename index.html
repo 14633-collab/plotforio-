@@ -1,51 +1,206 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio อัษฎา ปาคำวัง</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Portfolio | อัษฎา ปาคำวัง</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+
+background:linear-gradient(-45deg,#38bdf8,#60a5fa,#ffffff,#93c5fd);
+background-size:400% 400%;
+animation:bg 12s ease infinite;
+
+overflow:hidden;
+
+}
+
+@keyframes bg{
+
+0%{background-position:0% 50%;}
+
+50%{background-position:100% 50%;}
+
+100%{background-position:0% 50%;}
+
+}
+
+.card{
+
+width:900px;
+max-width:90%;
+
+padding:40px;
+
+border-radius:30px;
+
+background:rgba(255,255,255,.18);
+
+backdrop-filter:blur(20px);
+-webkit-backdrop-filter:blur(20px);
+
+border:1px solid rgba(255,255,255,.4);
+
+box-shadow:0 20px 45px rgba(0,0,0,.25);
+
+text-align:center;
+
+animation:fade 1s;
+
+}
+
+@keyframes fade{
+
+from{
+opacity:0;
+transform:translateY(40px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+img{
+
+width:230px;
+height:230px;
+
+object-fit:cover;
+
+border-radius:50%;
+
+border:6px solid white;
+
+box-shadow:0 0 35px rgba(255,255,255,.9);
+
+transition:.4s;
+
+}
+
+img:hover{
+
+transform:scale(1.08) rotate(3deg);
+
+}
+
+h1{
+
+color:white;
+font-size:45px;
+margin:20px;
+
+text-shadow:0 0 15px rgba(0,0,0,.3);
+
+}
+
+h2{
+
+color:#0f172a;
+
+}
+
+p{
+
+font-size:20px;
+margin:15px;
+
+color:#334155;
+
+}
+
+.menu{
+
+margin-top:35px;
+
+}
+
+.menu a{
+
+display:inline-block;
+
+margin:10px;
+
+padding:14px 28px;
+
+border-radius:40px;
+
+text-decoration:none;
+
+font-weight:bold;
+
+color:white;
+
+background:linear-gradient(135deg,#0ea5e9,#2563eb);
+
+transition:.35s;
+
+box-shadow:0 10px 20px rgba(37,99,235,.3);
+
+}
+
+.menu a:hover{
+
+transform:translateY(-6px) scale(1.08);
+
+box-shadow:0 18px 30px rgba(37,99,235,.4);
+
+}
+
+.menu a:active{
+
+transform:scale(.95);
+
+}
+
+</style>
+
 </head>
 
-<body style="background: linear-gradient(to bottom, gold, orange); text-align:center; font-family:Arial;">
+<body>
 
-    <h1 style="color:white;">นาย อัษฎา ปาคำวัง</h1>
+<div class="card">
 
-    <img src="1000026431.jpg"
-         alt="รูปของผม"
-         width="250"
-         height="250"
-         style="border-radius:50%; object-fit:cover; border:5px solid white; box-shadow:0 0 20px gray;">
+<h1>นาย อัษฎา ปาคำวัง</h1>
 
-    <h2>นักเรียนโรงเรียนพานทอง</h2>
+<img src="1000026431.jpg" alt="รูปของผม">
 
-    <p>😊 นักเรียนชั้นมัธยมศึกษาปีที่ 6</p>
+<h2>นักเรียนโรงเรียนพานทอง</h2>
 
-    <br>
+<p>🎓 นักเรียนชั้นมัธยมศึกษาปีที่ 6</p>
 
-    <a href="index.html"
-       style="background:white; color:orange; padding:12px 25px; border-radius:30px; text-decoration:none; margin:8px; display:inline-block;">
-       🏠 หน้าแรก
-    </a>
+<div class="menu">
 
-    <a href="profile.html"
-       style="background:white; color:orange; padding:12px 25px; border-radius:30px; text-decoration:none; margin:8px; display:inline-block;">
-       👤 ประวัติส่วนตัว
-    </a>
+<a href="index.html">🏠 หน้าแรก</a>
 
-    <a href="education.html"
-       style="background:white; color:orange; padding:12px 25px; border-radius:30px; text-decoration:none; margin:8px; display:inline-block;">
-       🎓 ประวัติการศึกษา
-    </a>
+<a href="profile.html">👤 ประวัติส่วนตัว</a>
 
-    <a href="works.html"
-       style="background:white; color:orange; padding:12px 25px; border-radius:30px; text-decoration:none; margin:8px; display:inline-block;">
-       🏆 ผลงาน
-    </a>
+<a href="education.html">🎓 ประวัติการศึกษา</a>
 
-    <a href="contact.html"
-       style="background:white; color:orange; padding:12px 25px; border-radius:30px; text-decoration:none; margin:8px; display:inline-block;">
-       📞 ช่องทางติดต่อ
-    </a>
+<a href="works.html">🏆 ผลงาน</a>
+
+<a href="contact.html">📞 ติดต่อ</a>
+
+</div>
+
+</div>
 
 </body>
 </html>
