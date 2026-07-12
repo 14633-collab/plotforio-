@@ -1,1 +1,42 @@
-
+<!DOCTYPE html>
+<html lang="th"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>📞 ติดต่อ | อัษฎา ปาคำวัง</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{min-height:100vh;display:flex;justify-content:center;align-items:center;padding:30px;background:linear-gradient(-45deg,#38bdf8,#60a5fa,#fff,#93c5fd);background-size:400% 400%;animation:bg 12s ease infinite;overflow:hidden}
+@keyframes bg{0%{background-position:0 50%}50%{background-position:100% 50%}100%{background-position:0 50%}}
+.card{width:700px;max-width:95%;padding:35px;border-radius:28px;background:rgba(255,255,255,.18);backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.4);box-shadow:0 20px 45px rgba(0,0,0,.25);z-index:2}
+h1{text-align:center;color:#fff;font-size:42px;margin-bottom:10px}
+.sub{text-align:center;color:#234;margin-bottom:25px}
+.info{background:rgba(255,255,255,.2);padding:15px;border-radius:18px;margin:12px 0;transition:.3s;color:#123}
+.info:hover{transform:translateY(-5px) scale(1.02);box-shadow:0 0 18px #38bdf8,0 0 35px #60a5fa}
+.info a{text-decoration:none;color:#2563eb;font-weight:bold}
+.back{display:block;width:220px;margin:28px auto 0;text-align:center;padding:14px;border-radius:40px;background:linear-gradient(135deg,#0ea5e9,#2563eb);color:#fff;text-decoration:none;font-weight:bold}
+.back:hover{box-shadow:0 0 18px #38bdf8,0 0 40px #2563eb}
+.cloud{position:fixed;width:220px;height:70px;background:#fff;border-radius:100px;opacity:.8;animation:move 35s linear infinite}
+.cloud:before,.cloud:after{content:"";position:absolute;background:#fff;border-radius:50%}
+.cloud:before{width:80px;height:80px;left:25px;top:-30px}.cloud:after{width:95px;height:95px;right:25px;top:-40px}
+.c1{top:70px;left:-250px}.c2{top:220px;left:-350px;animation-duration:45s}
+@keyframes move{from{transform:translateX(-300px)}to{transform:translateX(calc(100vw + 600px))}}
+.star{position:fixed;width:4px;height:4px;background:#fff;border-radius:50%;box-shadow:0 0 8px #fff;animation:tw 2s infinite}
+@keyframes tw{50%{opacity:1;transform:scale(2)}0%,100%{opacity:.2}}
+.s1{top:8%;left:12%}.s2{top:20%;left:80%}.s3{top:70%;left:25%}.s4{top:85%;left:70%}
+.wave{position:fixed;bottom:0;left:0;width:100%;height:120px;background:rgba(255,255,255,.3);border-radius:100% 100% 0 0}
+</style></head><body>
+<div class="cloud c1"></div><div class="cloud c2"></div>
+<div class="star s1"></div><div class="star s2"></div><div class="star s3"></div><div class="star s4"></div>
+<div class="wave"></div>
+<div class="card">
+<h1>💌 ติดต่อฉัน</h1>
+<p class="sub">ยินดีที่ได้รู้จักครับ 😊</p>
+<div class="info">📱 <b>โทร</b><br><a href="tel:0646294433">064-629-4433</a></div>
+<div class="info">📧 <b>อีเมล</b><br><a href="mailto:oomena10a@gmail.com">oomena10a@gmail.com</a></div>
+<div class="info">💬 <b>LINE</b><br>your_line_id</div>
+<div class="info">📘 <b>Facebook</b><br>facebook.com/yourname</div>
+<div class="info">📸 <b>Instagram</b><br>@yourname</div>
+<div class="info">🎵 <b>TikTok</b><br>@yourname</div>
+<div class="info">💻 <b>GitHub</b><br>github.com/yourname</div>
+<div class="info">📍 <b>โรงเรียน</b><br>โรงเรียนพานทอง</div>
+<div class="info">🕒 <b>เวลาติดต่อ</b><br>08:00 - 20:00 น.</div>
+<a class="back" href="index.html">🏠 กลับหน้าหลัก</a>
+</div></body></html>
