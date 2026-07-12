@@ -269,7 +269,48 @@ transform:scale(.95);
 .star9{top:25%;left:55%;animation-delay:1.7s;}
 .star10{top:88%;left:30%;animation-delay:.3s;}
 </style>
+/* ===== คลื่นน้ำ ===== */
 
+.wave{
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:200%;
+    height:180px;
+
+    background:rgba(255,255,255,.45);
+
+    border-radius:45% 55% 0 0;
+
+    animation:waveMove 12s linear infinite;
+
+    z-index:-1;
+}
+
+.wave2{
+    height:150px;
+    background:rgba(255,255,255,.28);
+    animation-duration:18s;
+    animation-direction:reverse;
+}
+
+.wave3{
+    height:120px;
+    background:rgba(255,255,255,.18);
+    animation-duration:25s;
+}
+
+@keyframes waveMove{
+
+0%{
+transform:translateX(0);
+}
+
+100%{
+transform:translateX(-50%);
+}
+
+}
 </head>
 
 <body>
@@ -288,6 +329,9 @@ transform:scale(.95);
 <div class="cloud cloud1"></div>
 <div class="cloud cloud2"></div>
 <div class="cloud cloud3"></div>
+<div class="wave"></div>
+<div class="wave wave2"></div>
+<div class="wave wave3"></div>
 
 <div class="card">
 
