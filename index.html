@@ -41,29 +41,43 @@ overflow:hidden;
 }
 
 .card{
+  position:relative;
+    z-index:10;
 
-width:900px;
-max-width:90%;
+    width:900px;
+    max-width:90%;
+    padding:40px;
 
-padding:40px;
+    border-radius:30px;
+    background:rgba(255,255,255,.18);
 
-border-radius:30px;
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
 
-background:rgba(255,255,255,.18);
+    border:1px solid rgba(255,255,255,.4);
 
-backdrop-filter:blur(20px);
--webkit-backdrop-filter:blur(20px);
+    box-shadow:0 20px 45px rgba(0,0,0,.25);
 
-border:1px solid rgba(255,255,255,.4);
+    text-align:center;
 
-box-shadow:0 20px 45px rgba(0,0,0,.25);
-
-text-align:center;
-
-animation:fade 1s;
-
+    animation:fade 1s;
 }
 
+/* ===== แสงตามเมาส์ ===== */
+
+#light{
+    position:fixed;
+    width:350px;
+    height:350px;
+    border-radius:50%;
+    pointer-events:none;
+    background:radial-gradient(circle,
+        rgba(255,255,255,.35) 0%,
+        rgba(255,255,255,.15) 40%,
+        transparent 75%);
+    transform:translate(-50%,-50%);
+    z-index:2;
+}
 @keyframes fade{
 
 from{
@@ -327,6 +341,7 @@ transform:scale(.95);
 
 <body>
 <!-- ดาว -->
+<div id="light"></div>
 <div class="star star1"></div>
 <div class="star star2"></div>
 <div class="star star3"></div>
@@ -386,6 +401,14 @@ transform:scale(.95);
 </div>
 
 </div>
+<script>
+const light = document.getElementById("light");
 
+document.addEventListener("mousemove", (e)=>{
+    light.style.left = e.clientX + "px";
+    light.style.top = e.clientY + "px";
+});
+</script>
 </body>
+    
 </html>
