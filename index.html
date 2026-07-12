@@ -268,47 +268,58 @@ transform:scale(.95);
 .star8{top:80%;left:75%;animation-delay:2.3s;}
 .star9{top:25%;left:55%;animation-delay:1.7s;}
 .star10{top:88%;left:30%;animation-delay:.3s;}
-/* ===== คลื่นน้ำ ===== */
+/* ===== คลื่นทะเล SVG ===== */
 
-.wave{
+.wave-container{
     position:fixed;
     bottom:0;
     left:0;
+    width:100%;
+    overflow:hidden;
+    line-height:0;
+    z-index:1;
+}
+
+.wave-container svg{
+    display:block;
     width:200%;
     height:180px;
+}
 
-    background:rgba(255,255,255,.45);
-
-    border-radius:45% 55% 0 0;
-
-    animation:waveMove 12s linear infinite;
-
-    z-index:-1;
+.wave1{
+    animation:wave1 12s linear infinite;
 }
 
 .wave2{
-    height:150px;
-    background:rgba(255,255,255,.28);
-    animation-duration:18s;
-    animation-direction:reverse;
+    animation:wave2 18s linear infinite;
 }
 
 .wave3{
-    height:120px;
-    background:rgba(255,255,255,.18);
-    animation-duration:25s;
+    animation:wave1 25s linear infinite;
 }
 
-@keyframes waveMove{
-
-0%{
-transform:translateX(0);
+@keyframes wave1{
+    from{
+        transform:translateX(0);
+    }
+    to{
+        transform:translateX(-25%);
+    }
 }
 
-100%{
-transform:translateX(-50%);
+@keyframes wave2{
+    from{
+        transform:translateX(-25%);
+    }
+    to{
+        transform:translateX(0);
+    }
 }
 
+/* ให้การ์ดอยู่หน้าคลื่น */
+.card{
+    position:relative;
+    z-index:10;
 }
     
 </style>
@@ -330,9 +341,24 @@ transform:translateX(-50%);
 <div class="cloud cloud1"></div>
 <div class="cloud cloud2"></div>
 <div class="cloud cloud3"></div>
-<div class="wave"></div>
-<div class="wave wave2"></div>
-<div class="wave wave3"></div>
+<div class="wave-container">
+
+    <svg class="wave1" viewBox="0 0 1440 320" preserveAspectRatio="none">
+        <path fill="rgba(255,255,255,0.55)"
+        d="M0,224L48,208C96,192,192,160,288,154.7C384,149,480,171,576,192C672,213,768,235,864,224C960,213,1056,171,1152,160C1248,149,1344,171,1392,181.3L1440,192V320H0Z"></path>
+    </svg>
+
+    <svg class="wave2" viewBox="0 0 1440 320" preserveAspectRatio="none" style="position:absolute;bottom:0;left:0;">
+        <path fill="rgba(255,255,255,0.35)"
+        d="M0,192L60,202.7C120,213,240,235,360,224C480,213,600,171,720,176C840,181,960,235,1080,240C1200,245,1320,203,1380,181.3L1440,160V320H0Z"></path>
+    </svg>
+
+    <svg class="wave3" viewBox="0 0 1440 320" preserveAspectRatio="none" style="position:absolute;bottom:0;left:0;">
+        <path fill="rgba(255,255,255,0.22)"
+        d="M0,256L80,245.3C160,235,320,213,480,218.7C640,224,800,256,960,250.7C1120,245,1280,203,1360,181.3L1440,160V320H0Z"></path>
+    </svg>
+
+</div>
 
 <div class="card">
 
